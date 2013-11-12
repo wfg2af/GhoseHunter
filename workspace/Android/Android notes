@@ -1,0 +1,54 @@
+Android
+
+Activity - (Think full screen window)
+	Activities can stack. When the back button is pressed it "Destroys" the top activity and shows the 
+	activity below it.
+	
+	Activities have "things" called views. Can be text box, pictures, button etc.
+	
+	Layout Views exist to store and map out other views. 
+	
+
+	
+	
+So what happens when you run an app?
+	1. it reads AndroidManifest.xml
+		- what activity (java class) should run first?
+		- Permissions
+			* What activities may ever be created by the app?
+			* What sensors can we use?
+			
+	2. starts the activity (see collab image)
+	
+	2.5. one activity starts another
+		- make an Intent object
+			* means "I want to make an activity of this type"
+		- send the intent to Android to handle
+			* startActivity(Intent);
+			
+			
+Threading
+	A thread is like a worker
+	Each thread has its own stack
+		Each thread is aware of what it is doing but not what the other threads are doing
+		
+	Each thread has one heap
+		an object for 1 thread is the same object for all other threads.
+		
+	Lots of things can go wrong
+		race condition = two threads modify the same field at the same time
+		
+Android threads
+	1 thread has special powers: It can modify activity and view objects
+		Called UI thread (User Interface thread)
+		
+	if UI thread is busy doing something else
+		Everything freezes on the screen
+		and if it lasts long enough, Android kills your app
+		
+		
+Extend the AsyncTask class
+	which is something for the worker to do
+	and is a way for the worker to talk to the UI thread
+	
+	

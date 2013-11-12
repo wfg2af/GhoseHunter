@@ -1,0 +1,90 @@
+MSD Chapter 4
+	4.1 - 4.3: good stuff
+		have a concept before requirements
+		A concept is not equal to object fields
+		Specification: "States what output for every input"
+	
+	4.4: (What today's lecture (2/4/13) is on
+		4.4.4 UML - Universal Modeling Language - is not part of learning objectives of CS 2110
+		
+	4.5, 4.6: Not much new stuff
+	
+	
+OO Design (Object Oriented design)
+	1st Step - list nouns, verbs, and relationships
+		noun - a thing in the problem space
+		verb - someting that happens to/with/by the things
+		relationship: is-a, has-a, uses
+		
+		
+Activity: Want to have softare track people, their ancestry, etc.
+	
+	nouns: 
+		main person
+		ancestors
+		generations
+		blood relatives
+		relatives by marriage
+		birth/ death dates
+		age
+		country
+		ethnicity
+		gender
+		adoption
+		legitimacy of children
+		
+	Verbs:
+		death,
+		immigration, emigration
+		inherit
+		disown
+		emancipate
+		divorce
+		separate
+		clone
+		marry
+		exhile
+		breed
+		
+		
+	After we brainstorm, we start sketching designs
+		what classes, what inheritance, and what attributes
+		evaluate:
+			what methods will be easy to write with this design
+			
+Design 1: Simple
+	Class Person with attributes
+		Date birth;
+		Person mom;
+		Person dad;
+		
+Design 2: Flexible
+	Class Person with 1 attribute
+		Participation[] events;
+		
+	Class Participation with 2 attributes:
+		Event event;
+		int role;
+		
+	interface Event
+	
+	Class Birth implements event, with 2 attributes:
+		Date date;
+		Person[3] childMotherFather;
+		
+		
+		
+Simple vs. Flexible
+	fundamental conflict
+	
+Problems with this conflict
+	Brittle:
+		Brittle code is code where simple changes require many changes
+	
+	Spaghetti:
+		Hard to follow
+		
+	Bloat:
+		designed flexibility that is not needed
+	
+Over the years as maintenance is required code becomes more brittle, more spaghetti like and bloated. Because of this every few years programmers redesign.

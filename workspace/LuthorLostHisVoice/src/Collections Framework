@@ -1,0 +1,63 @@
+Collections Framework
+
+	
+	Framework vs. Library
+
+Library: 
+	A set of methods you can use
+	Generally,
+		you translate what you have into what they want,
+		then call the method,
+		then translate back,
+		
+Framework:
+	set of types, methods, and interfaces
+	pervades how we write code
+	
+Difference is not always clear.
+
+Collection<E>
+	add
+	remove
+	contains
+	size
+	iterator
+	
+List<E> extends Collection<E>
+	get(int)
+	set(int, value)
+	
+ArrayList<E> implements List<E>
+LinkedList<E> implements List<E>
+	(both implement all from Collection and List)
+	
+
+Why would List<E> be used?
+	Lets us make List<List<E>> and use both linked and array list.
+	
+	
+
+Why keep things more general?
+	
+	Parameters:
+		the more general the more useful the method
+		
+	return types:
+		the more general, the easier to override in subclasses
+		
+	reduces cognitive load:
+		fewer things to keep track of
+
+	Easier to read the code:
+		explicitly states "I don't care what kind it is"
+		
+
+		
+Collections Framework
+	A type hierarchy
+	A library of methods (Collections.sort, etc)
+		Collection - an interface
+		Collections - a library      (DON'T CONFUSE THESE!!!!!!!!!!!!!!!!! AAAAAHHHHHH!)
+		
+	Iterator
+		a common way to access a collection

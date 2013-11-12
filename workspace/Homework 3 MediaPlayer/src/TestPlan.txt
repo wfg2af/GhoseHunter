@@ -1,0 +1,16 @@
+We chose the 4 test cases because the first case, which tested addPlayList, first tested to see if
+a playlist was added. The second case, also testing addPlayList, then tested to see if when multiple
+playlists with the same name were added that it would not add duplicates. The 3rd case tested add
+playable, which was chosen because it tested to see if both a song and a video could be added and they
+could.
+
+The 4th case was tricky. loadMedia worked for the longest time and would load media no problem. But then
+I submitted my code to webcat and it didn't like it even though in my working test case it tested all 
+tricks that could have been put in, as stated in the assignment sheet. Of course though, webcat does not
+like exactly how I did it and I was forced to change my code. Webcat likes my new code a little better
+but now it does not function on my computer. This does not make sense, the main issue, it seems, is that
+trim() is not functioning right for me. I don't know why, especially because it was working perfectly before. 
+I tried doing .replace(" ", ""); to get rid of spaces, which worked, but webcat batted it's mighty paw
+at me and said no, use trim. So I did. But my code here still doesn't work like it used to. Maybe it's just
+on my computer, because I did not have any issues with trim previously. I'm not sure what has changed
+since last project to make such a change.
