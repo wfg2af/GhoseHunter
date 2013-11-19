@@ -8,7 +8,6 @@ import android.view.Menu;
 
 public class MainActivity extends Activity {
 
-Fragment mapFragment;	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -18,10 +17,6 @@ Fragment mapFragment;
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
-		 mapFragment = MapFragment.newInstance();
-		 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-		 fragmentTransaction.add(R.id.my_container, mMapFragment);
-		 fragmentTransaction.commit();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
